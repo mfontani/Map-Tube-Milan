@@ -52,21 +52,7 @@ construction.
  
 If something goes wrong, maybe because the map information file was corrupted,
 the constructor will die.
- 
-=head1 AUTHOR
- 
-Marco Fontani
- 
-=head1 COPYRIGHT AND LICENCE
- 
-The data for the JSON file were taken from an image in the English-language
-Wikipedia in the entry "List of Milan Metro stations",
-L<https://en.wikipedia.org/wiki/List_of_Milan_Metro_stations#/media/File:Milano_-_mappa_rete_metropolitana_(schematica).svg>.
-It is CC BY-SA 4.0 INT, 2006 by Arbalete.
 
-The module itself is free software; you may redistribute and/or modify
-it under the same terms as Perl itself.
- 
 =head1 SEE ALSO
  
 L<Map::Tube>, L<Map::Tube::GraphViz>.

@@ -4,7 +4,7 @@ Map::Tube::Milan - Interface to the Milan tube map
 
 # VERSION
 
-version 0.001
+version 0.002
 
 # SYNOPSIS
 
@@ -41,20 +41,6 @@ construction.
 
 If something goes wrong, maybe because the map information file was corrupted,
 the constructor will die.
-
-# AUTHOR
-
-Marco Fontani
-
-# COPYRIGHT AND LICENCE
-
-The data for the JSON file were taken from an image in the English-language
-Wikipedia in the entry "List of Milan Metro stations",
-[https://en.wikipedia.org/wiki/List\_of\_Milan\_Metro\_stations#/media/File:Milano\_-\_mappa\_rete\_metropolitana\_(schematica).svg](https://en.wikipedia.org/wiki/List_of_Milan_Metro_stations#/media/File:Milano_-_mappa_rete_metropolitana_\(schematica\).svg).
-It is CC BY-SA 4.0 INT, 2006 by Arbalete.
-
-The module itself is free software; you may redistribute and/or modify
-it under the same terms as Perl itself.
 
 # SEE ALSO
 
