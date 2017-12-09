@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Map::Tube::Milan;
+
 use 5.010_000;
 # ABSTRACT: Interface to the Milan tube map
 
