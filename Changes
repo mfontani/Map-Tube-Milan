@@ -1,4 +1,6 @@
 {{$NEXT}}
+
+0.003     2017-12-10 10:10:05+01:00 Europe/Rome
     Bumped Map::Tube version requirement
     Fixed meta_yml_has_provides kwalitee test
     Fixed build_prereq_matches_use kwalitee test
