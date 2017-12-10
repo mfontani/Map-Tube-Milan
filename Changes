@@ -1,4 +1,5 @@
 {{$NEXT}}
+    Bumped Map::Tube version requirement
 
 0.002     2017-12-09 10:24:26+01:00 Europe/Rome
     Correct version in main module
