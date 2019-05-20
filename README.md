@@ -4,7 +4,7 @@ Map::Tube::Milan - Interface to the Milan tube map
 
 # VERSION
 
-version 0.004
+version 0.005
 
 # SYNOPSIS
 
