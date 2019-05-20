@@ -1,4 +1,6 @@
 {{$NEXT}}
+    - Add "synopsis" test
+    - Bump minimum Map::Tube version to 3.62
 
 0.004     2017-12-11 11:33:14+01:00 Europe/Rome
     - Add "use" test
