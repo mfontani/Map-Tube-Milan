@@ -1,0 +1,51 @@
+name: Test
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-18.04
+    strategy:
+      matrix:
+        img:
+          - perl:latest
+          - perl:5.14
+    container: ${{ matrix.img }}
+    steps:
+      - uses: actions/checkout@v1
+      - name: initial debug
+        run: |
+          pwd
+          ls -lart
+          perl -V:version
+      - name: install cpm
+        run: |
+          curl -sL --compressed https://git.io/cpm > /usr/bin/cpm
+          chmod +x /usr/bin/cpm
+      - name: cpm install dist zilla prereqs
+        run: |
+          cpm install -v -g Dist::Zilla
+          cpm install -v -g Dist::Zilla::App::Command::cover
+          cpm install -v -g Dist::Zilla::Plugin::AutoPrereqs
+          cpm install -v -g Dist::Zilla::Plugin::MetaJSON
+          cpm install -v -g Dist::Zilla::Plugin::MetaProvides::Package
+          cpm install -v -g Dist::Zilla::Plugin::NextRelease
+          cpm install -v -g Dist::Zilla::Plugin::PkgVersion
+          cpm install -v -g Dist::Zilla::Plugin::PodCoverageTests
+          cpm install -v -g Dist::Zilla::Plugin::PodSyntaxTests
+          cpm install -v -g Dist::Zilla::Plugin::PodWeaver
+          cpm install -v -g Dist::Zilla::Plugin::Prereqs
+          cpm install -v -g Dist::Zilla::Plugin::ReadmeAnyFromPod
+          cpm install -v -g Dist::Zilla::Plugin::Test::Kwalitee::Extra
+          cpm install -v -g Dist::Zilla::PluginBundle::Basic
+          cpm install -v -g Dist::Zilla::PluginBundle::Git
+          cpm install -v -g Software::License::Perl_5
+      - name: install dependencies
+        run: |
+          dzil authordeps --missing | xargs --no-run-if-empty cpm install -v -g
+          dzil listdeps --missing | xargs --no-run-if-empty cpm install -v -g
+      - name: dzil build
+        run: dzil build
+      - name: dzil test
+        run: dzil test --automated --extended --author
+      - name: dzil cover
+        run: dzil cover
