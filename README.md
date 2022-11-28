@@ -4,7 +4,7 @@ Map::Tube::Milan - Interface to the Milan tube map
 
 # VERSION
 
-version 0.005
+version 0.006
 
 # SYNOPSIS
 
@@ -18,7 +18,7 @@ version 0.005
 # DESCRIPTION
 
 This module allows to find the shortest route between any two given tube
-stations in Milan. All interesting methods are provided by the role [Map::Tube](https://metacpan.org/pod/Map::Tube).
+stations in Milan. All interesting methods are provided by the role [Map::Tube](https://metacpan.org/pod/Map%3A%3ATube).
 
 # METHODS
 
@@ -30,7 +30,7 @@ stations in Milan. All interesting methods are provided by the role [Map::Tube](
 The only argument, `json`, is optional; if specified, it should be a code ref
 to a function that returns either the path the JSON map file, or a string
 containing this JSON content. The default is the path to `milan.json`
-that is a part of this distribution. For further information see [Map::Tube](https://metacpan.org/pod/Map::Tube).
+that is a part of this distribution. For further information see [Map::Tube](https://metacpan.org/pod/Map%3A%3ATube).
 
 ## json()
 
@@ -44,7 +44,7 @@ the constructor will die.
 
 # SEE ALSO
 
-[Map::Tube](https://metacpan.org/pod/Map::Tube), [Map::Tube::GraphViz](https://metacpan.org/pod/Map::Tube::GraphViz).
+[Map::Tube](https://metacpan.org/pod/Map%3A%3ATube), [Map::Tube::GraphViz](https://metacpan.org/pod/Map%3A%3ATube%3A%3AGraphViz).
 
 # AUTHOR
 
